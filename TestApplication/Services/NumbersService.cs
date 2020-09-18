@@ -10,11 +10,11 @@ namespace TestApplication.Services
     public class NumbersService
     {
         private readonly INumbersValidator _validator;
-        private readonly NumbersCashService _cashService;
+        private readonly INumbersCashService _cashService;
         private readonly int _minTimeout;
         private readonly int _maxTimeout;
 
-        public NumbersService(INumbersValidator validator, NumbersCashService cashService, IConfiguration config)
+        public NumbersService(INumbersValidator validator, INumbersCashService cashService, IConfiguration config)
         {
             _validator = validator;
             _cashService = cashService;

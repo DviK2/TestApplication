@@ -6,7 +6,13 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace TestApplication.Services
 {
-    public class NumbersCashService
+    public interface INumbersCashService
+    {
+        bool TryGet(int number, out int value);
+        void Set(int number, int value);
+    }
+
+    public class NumbersCashService : INumbersCashService
     {
         private const string NumbersCashKey = "number";
 
