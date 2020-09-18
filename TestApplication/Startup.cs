@@ -22,8 +22,8 @@ namespace TestApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<INumbersValidator, NumbersValidator>();
+            services.AddTransient<INumbersCashService, NumbersCashService>();
             services.AddTransient<NumbersService>();
-            services.AddTransient<NumbersCashService>();
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
