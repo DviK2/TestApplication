@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
+using TestApplication.Exceptions;
 
 namespace TestApplication.Services
 {
@@ -44,28 +44,6 @@ namespace TestApplication.Services
             }
 
             return true;
-        }
-    }
-
-    public class MaxNumberException : Exception
-    {
-        public MaxNumberException(int num, int max) : base($"The number ({num}) is greater then allowed ({max})")
-        {
-        }
-    }
-
-
-    public class MinNumberException : Exception
-    {
-        public MinNumberException(int num, int min) : base($"The number ({num}) is less then allowed ({min})")
-        {
-        }
-    }
-
-    public class MaxCountException : Exception
-    {
-        public MaxCountException(int count, int maxCount) : base($"Numbers count ({count}) is greater then allowed ({maxCount})")
-        {
         }
     }
 }

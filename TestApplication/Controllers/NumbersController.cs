@@ -32,8 +32,6 @@ namespace TestApplication.Controllers
 
     public class NumbersModel
     {
-        [JsonProperty("numbers")]
         public List<int> Numbers { get; set; }
-        public string Number { get; set; }
     }
 }
