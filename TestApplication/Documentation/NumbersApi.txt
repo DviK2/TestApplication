@@ -1,0 +1,29 @@
+﻿Метод по расчёту сумм квадратов чисел переданной последовательности:
+
+адрес:
+	POST https://localhost:5001/api/GetSquaredSum
+
+headers:
+	Content-Type application/json
+
+body (json):
+	{"Numbers": [1,1,2]}
+
+Пример ответа(200 OK):
+	6
+
+Возможные ошибки(400 Bad Request):
+			{
+				"type": "MaxCountException",
+				"message": "Numbers count (6) is greater then allowed (5)"
+			}
+
+			{
+				"type": "MinNumberException",
+				"message": "The number (-1) is less then allowed (1)"
+			}
+
+			{
+				"type": "MaxNumberException",
+				"message": "The number (30) is greater then allowed (10)"
+			}
