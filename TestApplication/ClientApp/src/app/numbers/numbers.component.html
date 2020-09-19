@@ -1,0 +1,17 @@
+<h1>Расчет суммы квадратов</h1>
+
+<input type="text" [(ngModel)]="numberstr" class="form-control" />
+<input type="button" value="Расчитать" class="btn btn-default" (click)="getSum()" />
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>Числа</td>
+      <td>Результат</td>
+    </tr>
+  </thead>
+  <tr *ngFor="let n of numbers">
+      <td>{{n?.numbers}}</td>
+      <td>{{n?.result}}</td>
+
+  </tr>
+</table>
