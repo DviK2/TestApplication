@@ -32,6 +32,6 @@ import { NumbersComponent } from './numbers/numbers.component';
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, NumbersComponent]
 })
 export class AppModule { }
